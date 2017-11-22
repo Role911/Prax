@@ -1,0 +1,568 @@
+/* width */
+$w140: 140px;
+$w115: 115px;
+$w110: 110px;
+$w100: 100px;
+$w95: 95px;
+$w86: 86px;
+$w80: 80px;
+
+/* height */
+$h34: 34px;
+$h30: 30px;
+$h25: 25px;
+
+/* special button */
+$wh24: 24px;
+
+/* border-width */
+$border-width-2: 2px;
+$border-width-1: 1px;
+
+/* Params button-style: width, height, background-color, hover background-color, font-color, hover font-color */
+/* Params button-with-border: border-width, border-color */
+
+//Sign Up
+$su-tr-bl: $w140, $h30, $PH-transparent, $PH-blue, $PH-dark-gray, $PH-white;
+$su-social: $w100, $h25, $PH-white, $PH-blue, $PH-dark-gray, $PH-white;
+$su-ye-bl: $w95, $h30, $PH-yellow, $PH-blue, $PH-dark-blue, $PH-white;
+//Web elements
+$we-bl-ye: $w115, $h34, $PH-blue, $PH-yellow, $PH-white, $PH-dark-blue;
+$we-pi-dgr: $w115, $h30, $PH-dark-pink, $PH-dark-gray, $PH-white, $PH-white;
+$we-tr-bl: $w80, $h25, $PH-transparent, $PH-blue, $PH-blue, $PH-white;
+$we-tr-bl-status: $w110, $h34, $PH-transparent, $PH-blue, $PH-white, $PH-white;
+$we-ye-dbl: $w100, $h25, $PH-yellow, $PH-dark-blue, $PH-dark-blue, $PH-yellow;
+$we-dgr-bl: $w100, $h25, $PH-dark-gray, $PH-blue, $PH-white, $PH-white;
+//Admin elements
+$ae-bl-ye: $w115, $h34, $PH-blue, $PH-yellow, $PH-white, $PH-dark-blue;
+$ae-tr-dgr: $w115, $h34, $PH-transparent, $PH-dark-gray, $PH-gray, $PH-white;
+$ae-bl-ye-small: $w110, $h25, $PH-blue, $PH-yellow, $PH-white, $PH-dark-blue;
+$ar-gr-pink: $w110, $h25, $PH-gray, $PH-dark-pink, $PH-white, $PH-white;
+$ae-tr-blue-icon: $w86, $h25, rgba(white, .6), $PH-blue, $PH-white, $PH-white;
+// TODO: $ar-gr-ping needs to be $a'e' -gr-ping
+
+// TODO: kill blue line on focus / active click
+.btn {
+	border: none;
+	display: inline-block;
+	outline: none;
+	font-family: $ArquetteMedium;
+	//transition: background-color .15s ease-in-out,border-color .15s ease-in-out, font-color .15s ease-in-out ;
+
+	/* Sign Up */
+	&.btn-su-tr-bl {
+		@include button-style($su-tr-bl...);
+		@include button-with-border($border-width-2, $PH-dark-gray);
+		letter-spacing: -0.03em;
+		font-size: 13px;
+	}
+
+	&.btn-su-ye-bl {
+		@include button-style($su-ye-bl...);
+		letter-spacing: -0.03em;
+		font-size: 13px;
+	}
+
+	&.btn-su-social {
+		@include button-style($su-social...);
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		font-size: 13px;
+		svg {
+			width: 16px;
+			height: 16px;
+		}
+		span {
+			width: 80%;
+		}
+
+		&:hover {
+			svg {
+				fill: white;
+			}
+		}
+
+	}
+
+	/* Web elements */
+	&.btn-we-bl-ye {
+		@include button-style($we-bl-ye...);
+		font-size: 11px;
+	}
+
+	&.btn-we-pi-dgr {
+		@include button-style($we-pi-dgr...);
+		font-size: 11px;
+	}
+
+	&.btn-we-tr-bl {
+		@include button-style($we-tr-bl...);
+		@include button-with-border($border-width-2, $PH-blue);
+		font-size: 10px;
+	}
+
+	&.btn-we-follow {
+		width: 62px;
+		height: 24px;
+		padding: 0;
+		background-color: transparent;
+		&__small {
+			height: 18px;
+			width: 52px;
+		}
+
+		& .btn-follow-style {
+			@include button-with-border($border-width-1, $PH-blue);
+			float: right;
+			width: 24px;
+			height: 24px;
+			border-radius: 12px;
+			background-color: white;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			position: relative;
+			-webkit-transition: width .23s ease-in-out;
+			-o-transition: width .23s ease-in-out;
+			transition: width .23s ease-in-out;
+
+			&__small {
+				width: 18px;
+				height: 18px;
+				border-radius: 9px;
+			}
+
+			& .left {
+				visibility: hidden;
+				position: absolute;
+				left: 13px;
+				top: 3px;
+				color: $PH-blue;
+				&__small {
+					left: 9px;
+					top: 1px;
+				}
+			}
+
+			& .right {
+				position: absolute;
+				right: 7px;
+				top: 3px;
+				color: $PH-blue;
+				&__small {
+					right: 5px;
+					top: 2px;
+				}
+			}
+
+			&:hover {
+				width: 62px;
+
+				&.btn-follow-style__small {
+					width: 52px;
+				}
+
+				& .left {
+					visibility: visible;
+					-webkit-transition: visibility .25s ease-in-out .25s;
+					-o-transition: visibility .25s ease-in-out .25s;
+					transition: visibility .25s ease-in-out .25s;
+				}
+			}
+		}
+	}
+
+	&.btn-we-tr-bl-status {
+		@include button-style($we-tr-bl-status...);
+		@include button-with-border($border-width-2, $PH-white);
+		font-family: $ArquetteRegular;
+		font-size: 12px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: space-evenly;
+		-ms-flex-pack: space-evenly;
+		justify-content: space-evenly;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		span {
+			-webkit-box-shadow: 0 0 0 1px white;
+			box-shadow: 0 0 0 1px white;
+		}
+	}
+
+	&.btn-we-ye-dbl {
+		@include button-style($we-ye-dbl...);
+		font-size: 10px;
+	}
+
+	&.btn-we-dgr-bl {
+		@include button-style($we-dgr-bl...);
+		font-family: $ArquetteRegular;
+		font-size: 10px;
+	}
+
+	/* Admin elements */
+	&.btn-ae-bl-ye {
+		@include button-style($ae-bl-ye...);
+		font-size: 11px;
+	}
+	&.btn-ae-tr-dgr {
+		@include button-style($ae-tr-dgr...);
+		@include button-with-border($border-width-2, $PH-gray);
+		font-size: 11px;
+	}
+	&.btn-ae-bl-ye-small {
+		@include button-style($ae-bl-ye-small...);
+		font-size: 10px;
+	}
+	&.btn-gr-pi {
+		@include button-style($ar-gr-pink...);
+		font-size: 10px;
+	}
+
+	&.btn-tr-blue-icon {
+		@include button-style($ae-tr-blue-icon...);
+		@include button-with-border($border-width-1, rgba(white, .6));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $ArquetteRegular;
+		font-size: 11px;
+		padding-left: 12px;
+		line-height: 1;
+		svg {
+			margin-left: 10px;
+			width: 14px;
+			height: 14px;
+			fill: white;
+		}
+	}
+
+	&.btn-avatar {
+		width: 80px;
+		height: 80px;
+		min-width: 80px;
+		min-height: 80px;
+		border-radius: 2px;
+		background-color: rgba($PH-dark-gray, .1);
+		border: 2px solid rgba($PH-dark-gray, .24);
+
+		& .avatar-img {
+			height: 60px;
+			width: 100%;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+		}
+
+		svg {
+			height: 55px;
+			width: 55px;
+			fill: $PH-dark-gray;
+		}
+
+		& .avatar-text {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			background-color: $PH-dark-gray;
+			height: 16px;
+			font-size: 10px;
+			color: white;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+/**/
+
+
+
+/* button width */
+.btn-w190{min-width:190px;padding:0 15px!important;}
+.btn-w160{min-width:160px;padding:0 15px!important;}
+.btn-w140{min-width:140px;padding:0 15px!important;}
+.btn-w130{min-width:130px;padding:0 15px!important;}
+.btn-w115{min-width:115px;padding:0 15px!important;}
+.btn-w110{min-width:110px;padding:0 15px!important;}
+.btn-w100{min-width:100px;padding:0 15px!important;}
+.btn-w95{min-width:95px;padding:0 15px!important;}
+.btn-w80{min-width:80px;padding:0 15px!important;}
+.btn-w30{width:30px;padding:0!important;}
+
+
+/* button height */
+.btn-h34{height:34px;/*line-height:34px;*/border-radius:17px;-webkit-border-radius:17px;-moz-border-radius:17px;}
+.btn-h30{height:30px;/*line-height:30px;*/border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;}
+.btn-h26{height:26px;/*line-height:26px;*/border-radius:13px;-webkit-border-radius:13px;-moz-border-radius:13px;}
+.btn-h25{height:25px;/*line-height:25px;*/border-radius:12.5px;-webkit-border-radius:12.5px;-moz-border-radius:12.5px;}
+
+
+/* button font */
+.btn-fs13{font-size: 13px;letter-spacing: -0.03em;font-family: $ArquetteMedium!important;}
+.btn-fs12{font-size: 12px;letter-spacing: -0.03em;font-family: $ArquetteMedium!important;}
+.btn-fs11{font-size: 11px;font-family: $ArquetteRegular!important;}
+.btn-fs10{font-size: 10px;font-family: $ArquetteRegular!important;}
+
+
+
+/* btn color */
+.btn-trans-1{
+	background: $PH-transparent;
+	color: $PH-dark-gray;
+	border: 2px solid $PH-dark-gray!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-blue;
+		color:$PH-white;
+		border: 2px solid transparent!important;
+	}
+}
+/**/
+.btn-trans-2{
+	background: $PH-transparent;
+	color: $PH-blue;
+	border: 2px solid $PH-blue!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-blue;
+		color:$PH-white;
+		border: 2px solid transparent!important;
+	}
+}
+/**/
+.btn-trans-3{
+	background: $PH-transparent;
+	color: $PH-white;
+	border: 2px solid $PH-white!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-blue;
+		color:$PH-white;
+		border: 2px solid transparent!important;
+	}
+}
+/**/
+.btn-trans-4{
+	background: $PH-transparent;
+	color: $PH-gray;
+	border: 2px solid $PH-gray!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-dark-gray;
+		color:$PH-white;
+		border: 2px solid transparent!important;
+	}
+}
+/**/
+.btn-trans-5{
+	background: $PH-transparent;
+	color: $PH-grey-filter-text;
+	border: 2px solid rgba($PH-grey-filter, 0.5)!important;
+
+	&:hover,
+	&:focus{
+		background:rgba($PH-grey-filter, 0.5);
+		color:$PH-white;
+		border: 2px solid $PH-grey-filter!important;
+	}
+}
+/**/
+.btn-trans-6{
+	background: $PH-transparent;
+	color: $PH-dark-pink;
+	border: 2px solid $PH-dark-pink!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-blue;
+		color:$PH-white;
+		border: 2px solid $PH-blue!important;
+	}
+}
+/**/
+.btn-yellow-1{
+	background: $PH-yellow;
+	color: $PH-dark-blue;
+	border: 2px solid transparent!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-blue;
+		color:$PH-white;
+		border: 2px solid transparent!important;
+	}
+}
+/**/
+.btn-yellow-2{
+	background: $PH-yellow;
+	color: $PH-dark-blue;
+	border: 2px solid transparent!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-dark-blue;
+		color:$PH-yellow!important;
+		border: 2px solid transparent!important;
+	}
+}
+/**/
+.btn-white-1{
+	background: $PH-white;
+	color: $PH-dark-gray;
+	border: 2px solid transparent!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-blue;
+		color:$PH-white;
+		border: 2px solid transparent!important;
+	}
+}
+.btn-white-2{
+	background: rgba($PH-white, 0.6);
+	color: $PH-white;
+	border: 2px solid $PH-white!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-blue;
+		color:$PH-white;
+		border: 2px solid transparent!important;
+	}
+}
+/**/
+.btn-blue-1{
+	background: $PH-blue;
+	color: $PH-white;
+	border: 2px solid transparent!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-yellow;
+		color:$PH-dark-blue;
+		border: 2px solid transparent!important;
+	}
+}
+/**/
+.btn-pink-1{
+	background: $PH-dark-pink;
+	color: $PH-white;
+	border: 2px solid transparent!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-dark-gray;
+		color:$PH-white;
+		border: 2px solid transparent!important;
+	}
+}
+.btn-pink-2{
+	background: $PH-dark-pink;
+	color: $PH-white;
+	border: 2px solid transparent!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-blue;
+		color:$PH-white;
+		border: 2px solid transparent!important;
+	}
+}
+/**/
+.btn-grey-1{
+	background: $PH-dark-gray;
+	color: $PH-white;
+	border: 2px solid transparent!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-blue;
+		color:$PH-white;
+		border: 2px solid transparent!important;
+	}
+}
+/**/
+.btn-grey-2{
+	background: $PH-gray;
+	color: $PH-white;
+	border: 2px solid transparent!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-dark-pink;
+		color:$PH-white;
+		border: 2px solid transparent!important;
+	}
+}
+.btn-grey-3{
+	background: $PH-grey-filter-text;
+	color: $PH-white;
+	border: 2px solid transparent!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-dark-pink;
+		color:$PH-white;
+		border: 2px solid transparent!important;
+	}
+}
+/**/
+.btn-green-1{
+	background: $PH-green;
+	color: $PH-dark-blue;
+	border: 2px solid transparent!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-green;
+		color:$PH-dark-blue;
+		border: 2px solid transparent!important;
+	}
+}
+/**/
+.btn-green-2{
+	background: $PH-green;
+	color: $PH-white;
+	border: 2px solid transparent!important;
+
+	&:hover,
+	&:focus{
+		background:$PH-blue;
+		color: $PH-white;
+		border: 2px solid transparent!important;
+	}
+}

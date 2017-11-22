@@ -1,0 +1,148 @@
+.notification {
+	&--position {
+		padding: 30px 30px 35px 30px;
+	}
+
+	.toggle-box {
+		span {
+			font-size: 13px;
+			font-family: $ArquetteRegular;
+		}
+	}
+
+	.panel-body {
+		padding: 20px 25px 10px 25px;
+		text-align: left;
+		background-color: white;
+		border-radius: 2px;
+		box-shadow: 0px 1px 0px 0px rgba(96, 125, 139, 0.22) inset;
+	}
+
+	.section-2 {
+		&__title {
+			padding-top: 0;
+		}
+	}
+
+	.collapse {
+		&__holder {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			text-align: left;
+			margin-bottom: 20px;
+			a {
+				font-size: 13px;
+				font-family: $ArquetteRegular;
+				color: $PH-dark-blue;
+				text-decoration: none;
+				&:hover,
+				:focus,
+				:active {
+					color: $PH-blue;
+					font-family: $ArquetteMedium;
+				}
+			}
+			h3 {
+				color: $PH-dark-gray;
+			}
+			.sub-title-link {
+				color: $PH-dark-gray;
+				font-size: 12px;
+				border-bottom: 1px solid $PH-dark-gray;
+				&:hover {
+					border-color: $PH-blue;
+				}
+			}
+		}
+		&__link {
+			display: flex;
+			align-items: center;
+		}
+		&__img {
+			width: 30px;
+			height: 30px;
+			background-color: green;
+		}
+	}
+
+	.interests {
+		&--border {
+			border-bottom: 1px dotted rgba(96, 125, 139, 0.5);
+		}
+	}
+
+	.search-bar {
+		background-color: #eaeaea;
+		position: absolute;
+		right: 0;
+		&:after {
+			display: block;
+			height: 100%;
+			width: 500%;
+			position: absolute;
+			top: 0;
+			right: -500%;
+			content: "";
+			background: #eaeaea;
+		}
+		button {
+			border: none;
+			outline: none;
+			background: transparent;
+			position: absolute;
+			top: 5px;
+			right: 9px;
+		}
+		i {
+			color: $PH-dark-pink;
+		}
+		input {
+
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				color: $PH-dark-gray;
+				font-size: 12px;
+				letter-spacing: -0.03em;
+				font-family: Arquette-Regular;
+
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+				color: $PH-dark-gray;
+				font-size: 12px;
+				letter-spacing: -0.03em;
+				font-family: Arquette-Regular;
+
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+				color: $PH-dark-gray;
+				font-size: 12px;
+				letter-spacing: -0.03em;
+				font-family: Arquette-Regular;
+
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+				color: $PH-dark-gray;
+				font-size: 12px;
+				letter-spacing: -0.03em;
+				font-family: Arquette-Regular;
+
+			}
+		}
+
+		&__search {
+			height: 90px;
+			display: flex;
+			align-items: center;
+		}
+		& .form-group {
+			width: 100%;
+			margin-bottom: 0;
+			padding-left: 15px;
+		}
+
+	}
+
+	.card-title {
+		font-family: $ArquetteMedium;
+	}
+}

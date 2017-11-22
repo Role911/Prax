@@ -1,0 +1,48 @@
+<div ng-if="byndSpinner.isLoading" style="z-index: 9999;">
+    <style>
+        .bynd-spinner, .bynd-spinner__background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .bynd-spinner {
+            z-index: 9999;
+        }
+
+        .bynd-spinner__background {
+            background: #000;
+            opacity: 0.67;
+        }
+
+        .bynd-spinner__content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <div class="bynd-spinner">
+        <div class="bynd-spinner__background"
+            ng-style="byndSpinner.backgroundStyle">
+        </div>
+
+        <div class="bynd-spinner__content"
+            ng-if="!byndSpinner.templateUrl && !byndSpinner.imageSrc"
+            ng-include="byndSpinner.defaultTemplate">
+        </div>
+
+        <div class="bynd-spinner__content"
+            ng-if="byndSpinner.templateUrl"
+            ng-include="byndSpinner.templateUrl">
+        </div>
+
+        <img class="bynd-spinner__content"
+            ng-if="byndSpinner.imageSrc"
+            ng-src="{{ byndSpinner.imageSrc }}">
+    </div>
+</div>

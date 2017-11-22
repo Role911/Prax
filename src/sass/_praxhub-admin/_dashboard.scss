@@ -1,0 +1,251 @@
+.dashboard-left {
+	margin: 30px 15px;
+
+	/* Page statistics */
+	.statistic {
+		&--position {
+			display: flex;
+			margin-bottom: 30px;
+		}
+		&__section {
+			width: 25%;
+			text-align: center;
+			&--text-top {
+				font-family: $ArquetteRegular;
+				font-size: 12px;
+				line-height: 12px;
+				letter-spacing: -0.01em;
+				color: $PH-dark-gray;
+				margin-bottom: 2px;
+			}
+			&--text-bottom {
+				font-family: $ArquetteRegular;
+				font-size: 36px;
+				line-height: 36px;
+				letter-spacing: -0.01em;
+				color: $PH-dark-blue;
+			}
+		}
+	}
+
+	/* Upcoming events */
+	.upcoming {
+		background-color: white;
+		border-radius: 2px;
+		margin-bottom: 30px;
+
+		.ph-icon-calendar {
+			width: 14px;
+			height: 14px;
+			margin-right: 12px;
+		}
+
+		&__title {
+			content:"test";
+			display: flex;
+			justify-content: space-between;
+			padding: 15px 15px 15px 20px;
+			&--align {
+				display: flex;
+				align-items: center;
+			}
+			& .ph-icon-calendar {
+				fill: $PH-green;
+			}
+		}
+
+		&__description {
+			display: flex;
+			position: relative;
+		}
+
+		&__date {
+			padding: 20px 28px;
+			text-align: center;
+			align-self: center;
+		}
+
+		&__address {
+			width: 100%;
+			padding: 22px 30px;
+			&--align {
+				display: flex;
+				align-items: center;
+			}
+			.ph-icon-location-pointer-2 {
+				margin: 0 6px;
+				color: $PH-dark-gray;
+			}
+		}
+
+		.text {
+			color: $PH-dark-blue;
+			&--title {
+				color: $PH-dark-gray;
+			}
+			&--link {
+				font-size: 9px;
+				font-family: $ArquetteRegular;
+				letter-spacing: -0.01em;
+			}
+			&--day {
+				font-family: $ArquetteMedium;
+				font-size: 22px;
+				line-height: 22px;
+				letter-spacing: -0.01em;
+			}
+			&--month {
+				font-size: 15px;
+				line-height: 15px;
+				letter-spacing: -0.01em;
+			}
+			&--name {
+				font-size: 18px;
+				line-height: 25px;
+				letter-spacing: -0.01em;
+				margin-bottom: 2px;
+			}
+			&--address {
+				color: $PH-dark-gray;
+			}
+			&--toggle {
+				padding: 20px 25px 20px 5px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				& .tgl-btn {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	/* Table */
+	.recent-act {
+		width: 100%;
+		border-radius: 2px;
+		background-color: white;
+		&__title {
+			margin-bottom: 25px;
+		}
+		/*overflow: hidden;*/
+
+		&__table {
+			width: 100%;
+			max-width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0;
+
+			/*tr{
+				width:400px;
+			}*/
+
+			td {
+				padding: 10px 15px;
+				/*width:100px!important;
+				display:block;*/
+				/*overflow: hidden;*/
+			}
+		}
+		&__row {
+			&--first-text {
+				font-family: $ArquetteSemibold;
+				text-transform: uppercase;
+				color: $PH-sidebar-title;
+				white-space: nowrap;
+				/*display: inline-block;*/
+			}
+			&--second-text {
+				color: $PH-dark-blue;
+				/*overflow: hidden;*/
+				/*display: inline-block;*/
+
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+/////////////////////////////
+.dashboard-right {
+	margin: 30px -15px 30px 10px;
+	//height: calc(100vh - 500px);
+
+	/* Survey Admin */
+	.survey {
+		&--position {
+			display: flex;
+			margin-bottom: 16px;
+		}
+
+		&--big-text {
+			width: 56px;
+			font-size: 22px;
+			line-height: 22px;
+			letter-spacing: -0.01em;
+			color: $PH-dark-blue;
+			display: inline-block;
+		}
+		&--small-text {
+			font-size: 12px;
+			line-height: 22px;
+			letter-spacing: -0.01em;
+			color: $PH-dark-gray;
+		}
+
+		/* Survey Business */
+		&-business {
+			&__title {
+				margin-bottom: 15px;
+			}
+			&__question {
+				font-family: Arquette-Regular;
+				color: $PH-dark-blue;
+				margin-bottom: 30px;
+			}
+			&__results {
+				&--position {
+					display: flex;
+					align-items: center;
+					position: relative;
+					margin-bottom: 12px;
+				}
+				&--order {
+					font-family: Arquette-Regular;
+					color: $PH-dark-blue;
+					margin-right: 7px;
+				}
+				&--result {
+					font-family: Arquette-Regular;
+					color: $PH-dark-blue;
+					font-size: 22px;
+					width: 44px;
+					min-width: 44px;
+					margin-right: 30px;
+				}
+				&--progress-bar {
+					margin-right: 30px;
+				}
+				&--info {
+
+				}
+			}
+		}
+	}
+
+	/* Recent activity */
+	.recent-conn {
+		&__divider {
+			margin-left: -25px;
+			margin-bottom: 30px;
+		}
+		&__subtitle {
+			margin-bottom: 20px;
+		}
+		&--margin {
+			margin-bottom: 15px;
+		}
+	}
+}

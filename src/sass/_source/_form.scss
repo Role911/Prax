@@ -1,0 +1,645 @@
+/* Label font color; warning class color; input height; input font color;
+ input placeholder color; inp border; inp required color*/
+//left from mixin
+
+// TODO: make error / warning span and toggle visibility it with class on form-group
+
+.half-input {
+	display: flex;
+	div:first-child {
+		padding-right: 15px;
+	}
+	div:last-child {
+		padding-left: 15px;
+	}
+	.form-group {
+		width: 50%;
+	}
+}
+
+.form-group {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	//width: 300px;
+
+	label,
+	span.span-label {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 12px;
+		width: 100%;
+		margin-bottom: 15px;
+		font-family: $ArquetteRegular;
+		font-weight: 400;
+		letter-spacing: -0.01em;
+		color: $PH-dark-blue;
+		& .warning {
+			font-size: 10px;
+			color: $PH-dark-pink;
+		}
+	}
+
+	input {
+		height: 40px;
+		width: 100%;
+		font-family: $ArquetteRegular;
+		font-size: 12px;
+		letter-spacing: -0.01em;
+		color: $PH-dark-blue;
+		line-height: 30px;
+		border: none;
+		border-radius: 4px;
+		padding: 5px 15px;
+		margin-bottom: 25px;
+		background: rgba($PH-white, .7);
+		//box-shadow: 0px 2px 0px 0px rgba(211, 211, 211, 0.20) inset;
+
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			color: $PH-dark-gray;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+			color: $PH-dark-gray;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+			color: $PH-dark-gray;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+			color: $PH-dark-gray;
+		}
+
+		&:focus {
+			outline: none;
+			padding: 4px 14px;
+			border: 1px solid $PH-blue;
+			background: rgba($PH-white, 1);
+			box-shadow: none;
+		}
+
+		&:required {
+			padding: 4px 14px;
+			background: rgba($PH-dark-pink, .1);
+			border: 1px solid $PH-dark-pink;
+			color: $PH-dark-pink;
+			box-shadow: none;
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				color: $PH-dark-pink;
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+				color: $PH-dark-pink;
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+				color: $PH-dark-pink;
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+				color: $PH-dark-pink;
+			}
+		}
+	}
+
+	textarea {
+		resize: none;
+		//height: 40px;
+		width: 100%;
+		font-family: $ArquetteRegular;
+		font-size: 13px;
+		letter-spacing: -0.03em;
+		color: $PH-dark-gray;
+		line-height: 17px;
+		border: none;
+		border-radius: 2px;
+		padding: 13px;
+		background: rgba($PH-white, .7);
+		&:focus {
+			outline: none;
+			padding: 12px;
+			border: 1px solid $PH-blue;
+			background: rgba($PH-white, 1);
+			box-shadow: none;
+		}
+	}
+
+	button.btn-inset {
+		position: absolute;
+		right: 15px;
+		top: 30px;
+		background-color: transparent;
+
+		i {
+			color: rgba($PH-dark-gray, .2);
+		}
+	}
+
+
+	&.on-white {
+		label {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			//font-size: 16px;
+			font-size: 11px;
+			width: 100%;
+			margin-bottom: 15px;
+			font-family: $ArquetteRegular;
+			letter-spacing: -0.01em;
+			color: $PH-dark-gray;
+			& .warning {
+				font-size: 12px;
+				color: $PH-dark-pink;
+			}
+		}
+
+		input {
+			height: 30px;
+			width: 100%;
+			font-family: $ArquetteRegular;
+			//font-size: 16px;
+			font-size: 13px;
+			letter-spacing: -0.01em;
+			color: $PH-dark-blue;
+			line-height: 20px;
+			border: none;
+			border-radius: 2px;
+			padding: 5px 15px;
+			margin-bottom: 25px;
+			background: $PH-tag-gray;
+			//box-shadow: 0px 2px 0px 0px rgba(211, 211, 211, 0.20) inset;
+
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				color: $PH-dark-gray;
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+				color: $PH-dark-gray;
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+				color: $PH-dark-gray;
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+				color: $PH-dark-gray;
+			}
+
+			&:focus {
+				outline: none;
+				padding: 4px 14px;
+				border: 1px solid $PH-blue;
+				background: rgba($PH-tag-gray, 1);
+				box-shadow: none;
+			}
+
+			&:required {
+				padding: 4px 14px;
+				background: rgba($PH-dark-pink, .1);
+				border: 1px solid $PH-dark-pink;
+				color: $PH-dark-pink;
+				box-shadow: none;
+				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+					color: $PH-dark-pink;
+				}
+				&::-moz-placeholder { /* Firefox 19+ */
+					color: $PH-dark-pink;
+				}
+				&:-ms-input-placeholder { /* IE 10+ */
+					color: $PH-dark-pink;
+				}
+				&:-moz-placeholder { /* Firefox 18- */
+					color: $PH-dark-pink;
+				}
+			}
+		}
+	}
+
+	&.on-gray-ae {
+		/*margin-bottom: 28px;*/
+		margin-bottom: 23px;
+
+		label,
+		span.span-label {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 11px;
+			width: 100%;
+			margin-bottom: 12px;
+			font-family: $ArquetteRegular;
+			letter-spacing: -0.01em;
+			color: $PH-dark-gray;
+			line-height: 1;
+			& .warning {
+				font-size: 12px;
+				color: $PH-dark-pink;
+			}
+		}
+
+		input {
+			height: 30px;
+			width: 100%;
+			font-family: $ArquetteRegular;
+			font-size: 13px;
+			letter-spacing: -0.01em;
+			color: $PH-dark-gray;
+			line-height: 20px;
+			border: none;
+			border-radius: 2px;
+			padding: 5px 15px;
+			margin-bottom: 0;
+			background: $PH-white;
+			//box-shadow: 0px 2px 0px 0px rgba(211, 211, 211, 0.20) inset;
+
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				color: $PH-dark-gray;
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+				color: $PH-dark-gray;
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+				color: $PH-dark-gray;
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+				color: $PH-dark-gray;
+			}
+
+			&:focus {
+				outline: none;
+				padding: 4px 14px;
+				border: 1px solid $PH-blue;
+				box-shadow: none;
+			}
+
+			&:required {
+				padding: 4px 14px;
+				background: rgba($PH-dark-pink, .1);
+				border: 1px solid $PH-dark-pink;
+				color: $PH-dark-pink;
+				box-shadow: none;
+				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+					color: $PH-dark-pink;
+				}
+				&::-moz-placeholder { /* Firefox 19+ */
+					color: $PH-dark-pink;
+				}
+				&:-ms-input-placeholder { /* IE 10+ */
+					color: $PH-dark-pink;
+				}
+				&:-moz-placeholder { /* Firefox 18- */
+					color: $PH-dark-pink;
+				}
+			}
+		}
+
+		textarea {
+			background: $PH-white;
+		}
+
+		.input-add-field {
+			display: flex;
+			height: 30px;
+		}
+
+		svg {
+			width: 17px;
+			height: 17px;
+			align-self: center;
+			margin-left: 18px;
+			fill: $PH-blue;
+
+			&.add {
+				fill: $PH-blue;
+			}
+			&.disabled {
+				transform: rotate(45deg);
+				fill: rgba($PH-dark-gray, 2);
+			}
+			&.remove {
+				fill: $PH-dark-pink;
+			}
+		}
+	}
+
+	/* top right link */
+	span.form-link {
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 10px;
+		line-height: 1;
+
+		.insert-area {
+			width: 100%;
+			background-color: white;
+			border-radius: 2px;
+			height: 110px;
+			padding: 15px;
+			overflow: auto;
+
+			& .custom-list-add {
+				outline: none;
+				padding-left: 0;
+				margin-left: 15px;
+				li, input {
+					font-family: Arquette-Regular;
+					font-size: 13px;
+					color: $PH-dark-gray;
+					letter-spacing: -0.03em;
+					height: 18px;
+					padding-left: 0;
+					.input-field {
+						padding-left: 0;
+						color: $PH-dark-blue;
+					}
+				}
+			}
+		}
+	}
+
+	.on-grey-ae-info-roll {
+		display: flex;
+		align-items: center;
+		& input {
+			width: 190px;
+			height: 30px;
+			border-radius: 2px;
+			font-size: 14px;
+			line-height: 18px;
+			padding: 6px 20px 6px 30px;
+			border: none;
+			border-radius: 2px;
+		}
+
+		.btn-questionmark {
+			display: inline-block;
+			position: relative;
+			width: 16px;
+			height: 16px;
+			border-radius: 2px;
+			left: -26px;
+			background: rgba($PH-dark-gray, .5);
+			font-size: 11px;
+			line-height: 16px;
+			text-align: center;
+			color: white;
+			font-family: $ArquetteRegular;
+
+			&:hover {
+				background-color: $PH-blue;
+				cursor: default;
+			}
+
+			& ~ span {
+				visibility: hidden;
+				width: 130px;
+				background-color: $PH-white;
+				color: $PH-dark-blue;
+				font-size: 11px;
+				text-align: center;
+				border-radius: 2px;
+				padding: 18px 15px;
+				position: relative;
+				z-index: 1;
+				opacity: 0;
+				transition: opacity .25s;
+				box-shadow: 0px 10px 30px 0px rgba(00, 00, 00, 0.16);
+
+				&:after {
+					content: " ";
+					position: absolute;
+					top: 50%;
+					right: 100%; /* To the left of the tooltip */
+					margin-top: -10px;
+					border-width: 10px;
+					border-style: solid;
+					border-color: transparent $PH-white transparent transparent;
+				}
+			}
+
+			&:hover ~ span {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	// TODO: jel se koristi ovo?
+	.btn-questionmark-test {
+		display: inline-block;
+		position: relative;
+		width: 16px;
+		height: 16px;
+		border-radius: 2px;
+		background: rgba($PH-dark-gray, .5);
+		font-size: 11px;
+		line-height: 16px;
+		text-align: center;
+		color: white;
+		font-family: $ArquetteRegular;
+
+		&:hover {
+			background-color: $PH-blue;
+			cursor: default;
+		}
+
+		&.right span {
+			//visibility: hidden;
+			display: none;
+			width: 130px;
+			background-color: $PH-white;
+			color: $PH-dark-blue;
+			font-size: 11px;
+			text-align: center;
+			border-radius: 2px;
+			padding: 18px 15px;
+			position: relative;
+			z-index: 1;
+			opacity: 0;
+			transition: opacity .25s;
+			box-shadow: 0px 10px 30px 0px rgba(00, 00, 00, 0.16);
+			&:after {
+				content: " ";
+				position: absolute;
+				top: 50%;
+				right: 100%; /* To the left of the tooltip */
+				margin-top: -10px;
+				border-width: 10px;
+				border-style: solid;
+				border-color: transparent $PH-white transparent transparent;
+			}
+
+		}
+
+		&.bottom span {
+			//visibility: hidden;
+			display: none;
+			width: 130px;
+			background-color: $PH-white;
+			color: $PH-dark-blue;
+			font-size: 11px;
+			text-align: center;
+			border-radius: 2px;
+			padding: 18px 15px;
+			position: relative;
+			z-index: 1;
+			opacity: 0;
+			transition: opacity .25s;
+			box-shadow: 0px 10px 30px 0px rgba(00, 00, 00, 0.16);
+			&:after {
+				content: " ";
+				position: absolute;
+				top: 50%;
+				right: 100%; /* To the left of the tooltip */
+				margin-top: -10px;
+				border-width: 10px;
+				border-style: solid;
+				border-color: transparent $PH-white transparent transparent;
+			}
+		}
+
+		&:hover span {
+			//visibility: visible;
+			display: block;
+			opacity: 1;
+		}
+	}
+
+	// TODO: copy to UI kit this tooltip, review old one and delete!
+	/* Tooltip container */
+	.tooltip {
+		position: relative;
+		display: inline-block;
+		opacity: 1;
+		border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+	}
+
+	/* Tooltip text */
+	.info-tooltip {
+		position: relative;
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		min-width: 14px;
+		min-height: 14px;
+		border-radius: 2px;
+		background: rgba($PH-dark-gray, .5);
+		font-size: 10px;
+		line-height: 12px;
+		text-align: center;
+		color: white;
+		font-family: $ArquetteRegular;
+		cursor: default;
+	}
+
+	.info-tooltip .info-tooltiptext {
+		visibility: hidden;
+		position: absolute;
+		z-index: 1;
+		width: 130px;
+		background-color: $PH-white;
+		color: $PH-dark-blue;
+		font-size: 11px;
+		text-align: center;
+		border-radius: 2px;
+		padding: 18px 15px;
+		transition: opacity .25s;
+		box-shadow: 0px 10px 30px 0px rgba(00, 00, 00, 0.16);
+	}
+
+	// TODO: see if there is bottom tooltips without img so align widhts if needed
+	// TODO: watch for img stretching /shrinking!
+	.info-tooltip.info-img .info-tooltiptext {
+		text-align: left;
+		img {
+			width: 230px;
+			height: 92px;
+			margin-bottom: 12px;
+		}
+	}
+
+	.info-tooltip.info-right .info-tooltiptext {
+		bottom: -18px;
+		left: 40px;
+	}
+
+	.info-tooltip.info-bottom .info-tooltiptext {
+		width: 260px;
+		left: -123px;
+		top: 40px;
+	}
+
+	.info-tooltip .info-tooltiptext::after {
+		content: "";
+		position: absolute;
+	}
+
+	.info-tooltip.info-right .info-tooltiptext::after {
+		top: 50%;
+		right: 100%; /* To the left of the tooltip */
+		margin-top: -10px;
+		border-width: 10px;
+		border-style: solid;
+		border-color: transparent $PH-white transparent transparent;
+	}
+
+	.info-tooltip.info-bottom .info-tooltiptext::after {
+		bottom: 100%;
+		left: 46%;
+		margin-top: -10px;
+		border-width: 10px;
+		border-style: solid;
+		border-color: transparent transparent $PH-white transparent;
+	}
+
+	.info-tooltip:hover .info-tooltiptext {
+		visibility: visible;
+	}
+
+	.info-icon {
+		display: block;
+		width: 14px;
+		height: 14px;
+		&:after {
+			border: none;
+		}
+
+		& span {
+			display: inline-block;
+			visibility: hidden;
+			width: 480px;
+			background-color: $PH-white;
+			color: $PH-dark-blue;
+			text-align: center;
+			border-radius: 2px;
+			padding: 30px;
+			position: relative;
+			left: -233px;
+			top: 6px;
+			z-index: 1;
+			opacity: 0;
+			transition: opacity .25s;
+			box-shadow: 0px 10px 30px 0px rgba(00, 00, 00, 0.16);
+			&:after {
+				content: " ";
+				position: absolute;
+				bottom: 100%; /* At the top of the tooltip */
+				left: 50%;
+				margin-left: -5px;
+				border-width: 5px;
+				border-style: solid;
+				border-color: transparent transparent $PH-white transparent;
+			}
+		}
+		svg {
+			width: 14px;
+			height: 14px;
+			fill: rgba($PH-dark-gray, .4);
+		}
+		&:hover {
+			svg {
+				fill: $PH-blue;
+			}
+			span {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}

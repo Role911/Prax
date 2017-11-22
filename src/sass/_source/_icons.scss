@@ -1,0 +1,381 @@
+[data-icon]:before {
+    font-family: "praxhub-icons" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="ph-icon-"]:before,
+[class*=" ph-icon-"]:before {
+    font-family: "praxhub-icons" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="ph-icon-"],
+[class*=" ph-icon-"] {
+    position: relative;
+    display: inline-block;
+}
+
+
+.ph-icon-achievements:before {
+    content: "\e000";
+}
+.ph-icon-activityfeed:before {
+    content: "\e001";
+}
+.ph-icon-add-1:before {
+    content: "\e002";
+}
+.ph-icon-add-2:before {
+    content: "\e003";
+}
+.ph-icon-arrow-back:before {
+    content: "\e004";
+}
+.ph-icon-arrow-drop-down:before {
+    content: "\e005";
+}
+.ph-icon-arrow-drop-right:before {
+    content: "\e006";
+}
+.ph-icon-arrow-forward:before {
+    content: "\e007";
+}
+.ph-icon-arrow-right:before {
+    content: "\e008";
+}
+.ph-icon-article:before {
+    content: "\e009";
+}
+.ph-icon-avatar-doctor-1:before {
+    content: "\e00a";
+}
+.ph-icon-avatar-doctor-2:before {
+    content: "\e00b";
+}
+.ph-icon-badge-doctor:before {
+    content: "\e00c";
+}
+.ph-icon-brain:before {
+    content: "\e00d";
+}
+.ph-icon-building-clocktower:before {
+    content: "\e00e";
+}
+.ph-icon-building-college:before {
+    content: "\e00f";
+}
+.ph-icon-calendar:before {
+    content: "\e010";
+}
+.ph-icon-camera:before {
+    content: "\e011";
+}
+.ph-icon-certificate-1:before {
+    content: "\e012";
+}
+.ph-icon-certificate-2:before {
+    content: "\e013";
+}
+.ph-icon-chain:before {
+    content: "\e014";
+}
+.ph-icon-chat-1:before {
+    content: "\e015";
+}
+.ph-icon-chat-2:before {
+    content: "\e016";
+}
+.ph-icon-chat-new:before {
+    content: "\e017";
+}
+.ph-icon-clock:before {
+    content: "\e018";
+}
+.ph-icon-comment:before {
+    content: "\e019";
+}
+.ph-icon-comment-left:before {
+    content: "\e01a";
+}
+.ph-icon-comment-right:before {
+    content: "\e01b";
+}
+.ph-icon-comments:before {
+    content: "\e01c";
+}
+.ph-icon-cross-1:before {
+    content: "\e01d";
+}
+.ph-icon-cross-2:before {
+    content: "\e01e";
+}
+.ph-icon-dashboard:before {
+    content: "\e01f";
+}
+.ph-icon-disabled:before {
+    content: "\e020";
+}
+.ph-icon-dna:before {
+    content: "\e021";
+}
+.ph-icon-document-pdf:before {
+    content: "\e022";
+}
+.ph-icon-document-ppt:before {
+    content: "\e023";
+}
+.ph-icon-drag-item:before {
+    content: "\e024";
+}
+.ph-icon-edit-1:before {
+    content: "\e025";
+}
+.ph-icon-edit-2:before {
+    content: "\e026";
+}
+.ph-icon-education-1:before {
+    content: "\e027";
+}
+.ph-icon-education-2:before {
+    content: "\e028";
+}
+.ph-icon-email-confirmation:before {
+    content: "\e029";
+}
+.ph-icon-emoji:before {
+    content: "\e02a";
+}
+.ph-icon-employment:before {
+    content: "\e02b";
+}
+.ph-icon-envelope:before {
+    content: "\e02c";
+}
+.ph-icon-event-going:before {
+    content: "\e02d";
+}
+.ph-icon-event-profile:before {
+    content: "\e02e";
+}
+.ph-icon-eye:before {
+    content: "\e02f";
+}
+.ph-icon-fax:before {
+    content: "\e030";
+}
+.ph-icon-file:before {
+    content: "\e031";
+}
+.ph-icon-file-manager:before {
+    content: "\e032";
+}
+.ph-icon-first-aid:before {
+    content: "\e033";
+}
+.ph-icon-globe:before {
+    content: "\e034";
+}
+.ph-icon-hamburger:before {
+    content: "\e035";
+}
+.ph-icon-heart:before {
+    content: "\e036";
+}
+.ph-icon-help:before {
+    content: "\e037";
+}
+.ph-icon-home:before {
+    content: "\e038";
+}
+.ph-icon-impersonate:before {
+    content: "\e039";
+}
+.ph-icon-information:before {
+    content: "\e03a";
+}
+.ph-icon-interests:before {
+    content: "\e03b";
+}
+.ph-icon-invisible:before {
+    content: "\e03c";
+}
+.ph-icon-key:before {
+    content: "\e03d";
+}
+.ph-icon-loading:before {
+    content: "\e03e";
+}
+.ph-icon-location:before {
+    content: "\e03f";
+}
+.ph-icon-lock-open:before {
+    content: "\e040";
+}
+.ph-icon-lock-privacy:before {
+    content: "\e041";
+}
+.ph-icon-lock-reset:before {
+    content: "\e042";
+}
+.ph-icon-members:before {
+    content: "\e043";
+}
+.ph-icon-menu-horizontal:before {
+    content: "\e044";
+}
+.ph-icon-menu-vertical:before {
+    content: "\e045";
+}
+.ph-icon-mobile-1:before {
+    content: "\e046";
+}
+.ph-icon-mobile-2:before {
+    content: "\e047";
+}
+.ph-icon-news:before {
+    content: "\e048";
+}
+.ph-icon-notifications:before {
+    content: "\e049";
+}
+.ph-icon-paperclip:before {
+    content: "\e04a";
+}
+.ph-icon-pharma-company:before {
+    content: "\e04b";
+}
+.ph-icon-phone:before {
+    content: "\e04c";
+}
+.ph-icon-picture-1:before {
+    content: "\e04d";
+}
+.ph-icon-picture-2:before {
+    content: "\e04e";
+}
+.ph-icon-poll:before {
+    content: "\e04f";
+}
+.ph-icon-presentation-1:before {
+    content: "\e050";
+}
+.ph-icon-presentation-2:before {
+    content: "\e051";
+}
+.ph-icon-professional-associations:before {
+    content: "\e052";
+}
+.ph-icon-professional-information:before {
+    content: "\e053";
+}
+.ph-icon-qualifications:before {
+    content: "\e054";
+}
+.ph-icon-question-mark:before {
+    content: "\e055";
+}
+.ph-icon-quiz:before {
+    content: "\e056";
+}
+.ph-icon-remove:before {
+    content: "\e057";
+}
+.ph-icon-resume:before {
+    content: "\e058";
+}
+.ph-icon-save:before {
+    content: "\e059";
+}
+.ph-icon-search:before {
+    content: "\e05a";
+}
+.ph-icon-settings:before {
+    content: "\e05b";
+}
+.ph-icon-share:before {
+    content: "\e05c";
+}
+.ph-icon-shield-1:before {
+    content: "\e05d";
+}
+.ph-icon-shield-2:before {
+    content: "\e05e";
+}
+.ph-icon-star-1:before {
+    content: "\e05f";
+}
+.ph-icon-star-2:before {
+    content: "\e060";
+}
+.ph-icon-survey-poll:before {
+    content: "\e061";
+}
+.ph-icon-thumbs-down:before {
+    content: "\e062";
+}
+.ph-icon-thumbs-up:before {
+    content: "\e063";
+}
+.ph-icon-tick:before {
+    content: "\e064";
+}
+.ph-icon-tick-2:before {
+    content: "\e065";
+}
+.ph-icon-tick-selector:before {
+    content: "\e066";
+}
+.ph-icon-trash:before {
+    content: "\e067";
+}
+.ph-icon-upload-cloud:before {
+    content: "\e068";
+}
+.ph-icon-upload-file:before {
+    content: "\e069";
+}
+.ph-icon-userpost:before {
+    content: "\e06a";
+}
+.ph-icon-video-1:before {
+    content: "\e06b";
+}
+.ph-icon-video-2:before {
+    content: "\e06c";
+}
+.ph-icon-video-pause:before {
+    content: "\e06d";
+}
+.ph-icon-video-play:before {
+    content: "\e06e";
+}
+.ph-icon-view-event:before {
+    content: "\e06f";
+}
+.ph-icon-watchlater:before {
+    content: "\e070";
+}
+.ph-icon-youtube-play:before {
+    content: "\e071";
+}
+.ph-icon-gender-female:before {
+    content: "\e072";
+}
+.ph-icon-gender-male:before {
+    content: "\e073";
+}

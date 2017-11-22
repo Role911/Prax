@@ -1,0 +1,16 @@
+.chat-list{
+  background:#314e67;
+
+}
+
+
+
+.chat-container{
+  background:#eaeaea;
+}
+
+#center-right.chat-container{
+  &:after{
+    display:none!important;
+  }
+}

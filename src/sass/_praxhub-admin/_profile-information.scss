@@ -1,0 +1,723 @@
+.personal-info, .professional-info, .change-pass, .details, .admin-users, .pharmaceutical, .new-group-comp {
+	& #center-left, #center-right {
+		padding: 30px;
+		.half-input {
+			display: flex;
+			div:first-child {
+				padding-right: 15px;
+			}
+			div:last-child {
+				padding-left: 15px;
+			}
+			.form-group {
+				width: 50%;
+			}
+		}
+	}
+}
+
+/* Personal Information */
+.personal-info {
+	//& .tabs-list {
+	//	& .ph-icon {
+	//		width: 15px;
+	//		height: 15px;
+	//		margin-right: 10px;
+	//	}
+	//}
+
+	/* //////////////  */
+	#center-left {
+		// TODO: here goes Vue picker
+		// TODO: set form-group design depending on which area is
+		.birthday {
+			width: 190px !important;
+			margin-right: 30px;
+		}
+		.birthday-align {
+			display: flex;
+		}
+		.gender {
+		}
+		.radio {
+			display: inline-block;
+			margin: 5px 15px 0 0;
+			label {
+				padding: 0;
+				margin: 0;
+			}
+
+			& .custom-radio {
+				margin-right: 15px;
+			}
+		}
+		.half-input {
+			//display: flex;
+			//div:first-child {
+			//	margin-right: 15px;
+			//}
+			//div:last-child {
+			//	margin-left: 15px;
+			//}
+			//.form-group {
+			//	width: 50%;
+			//}
+			// TODO: make tooltip msg responsive of content
+			.tooltip {
+				&__holder {
+					position: relative;
+					& .info-tooltip.info-right .info-tooltiptext {
+						bottom: -23px;
+					}
+				}
+				&--position {
+					position: absolute;
+					bottom: 7px;
+					right: 9px;
+				}
+			}
+
+			// disable arrows in number input fields
+			input[type=number]::-webkit-outer-spin-button,
+			input[type=number]::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			input[type=number] {
+				-moz-appearance: textfield;
+			}
+		}
+
+		.avatar-holder {
+			display: flex;
+			margin-top: 5px;
+			.btn {
+				padding: 0;
+			}
+			.avatar-img {
+				svg {
+					height: 55px;
+					width: 55px;
+					fill: #607d8b;
+					margin-left: 0;
+				}
+			}
+
+			.avatar-desc {
+				padding: 15px 20px;
+				h4 {
+					color: $PH-dark-gray;
+					&:first-child {
+						margin-bottom: 10px;
+					}
+					&:last-child {
+						font-style: italic;
+					}
+				}
+			}
+		}
+
+	}
+
+	/* //////////////  */
+	#center-right {
+		.qual {
+			&--mrg-btm {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	#bottom-full {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding-left: 30px;
+
+		.btn {
+			width: 190px;
+		}
+	}
+}
+
+/* Professional information */
+// TODO: pitaj nicka za "consulting hours" sranje na proffesional information
+
+//TODO: provjeri ove .tabs-list jel moze bez njih, stavio si u base
+.professional-info {
+	//& .tabs-list {
+	//	& .ph-icon {
+	//		width: 15px;
+	//		height: 15px;
+	//		margin-right: 10px;
+	//	}
+	//}
+	#center-left {
+
+	}
+
+	#center-right {
+		.section {
+			&--mrg-btm {
+				margin-bottom: 30px;
+			}
+		}
+		// TODO: napravi bolju klasu za podjelu form-groupa (ispravio si ih na .half-input, pobrisi zakomentirano
+		//.institution-numbers {
+		//	display: flex;
+		//	div:first-child {
+		//		margin-right: 15px;
+		//	}
+		//	div:last-child {
+		//		margin-left: 15px;
+		//	}
+		//	.form-group {
+		//		width: 50%;
+		//	}
+		//}
+		.resume {
+			display: flex;
+			align-items: center;
+			position: relative;
+			margin-bottom: 30px;
+
+			.ph-icon-cross {
+				width: 8px;
+				height: 8px;
+				fill: $PH-dark-gray;
+				position: absolute;
+				right: 0;
+			}
+
+			.ph-icon-pdf {
+				margin-right: 15px;
+				fill: $PH-attachment-icon;
+			}
+		}
+
+		.add-cv {
+			&--position {
+				display: flex;
+				align-items: center;
+			}
+			&--text {
+				font-size: 10px !important;
+				color: rgba($PH-dark-gray, .4);
+				margin-bottom: 0;
+				margin-left: 10px;
+
+			}
+		}
+
+		.small {
+			margin-bottom: 13px;
+		}
+	}
+
+	#bottom-full {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding-left: 30px;
+
+	}
+}
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* Password change */
+.change-pass {
+	//& .tabs-list {
+	//	& .ph-icon {
+	//		width: 15px;
+	//		height: 15px;
+	//		margin-right: 10px;
+	//	}
+	//}
+	#center-left {
+
+	}
+
+	#center-right {
+
+	}
+
+	#bottom-full {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding-left: 30px;
+
+		.btn {
+			width: 190px;
+		}
+	}
+}
+
+/* BUSINESS */
+/* Details */
+.details {
+
+	#center-left {
+		// TODO: brisi phone-numbers svagjde
+		.half-input {
+			// TODO: make tooltip msg responsive of content
+			.tooltip {
+				&__holder {
+					position: relative;
+					& .info-tooltip.info-right .info-tooltiptext {
+						bottom: -23px;
+					}
+				}
+				&--position {
+					position: absolute;
+					bottom: 7px;
+					right: 9px;
+				}
+			}
+
+			// disable arrows in number input fields
+			input[type=number]::-webkit-outer-spin-button,
+			input[type=number]::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			input[type=number] {
+				-moz-appearance: textfield;
+			}
+		}
+		.avatar-holder {
+			display: flex;
+			margin-top: 5px;
+			.btn {
+				padding: 0;
+			}
+			.avatar-img {
+				svg {
+					height: 55px;
+					width: 55px;
+					fill: #607d8b;
+					margin-left: 0;
+				}
+			}
+
+			.avatar-desc {
+				padding: 15px 20px;
+				h4 {
+					color: $PH-dark-gray;
+					&:first-child {
+						margin-bottom: 10px;
+					}
+					&:last-child {
+						font-style: italic;
+					}
+				}
+			}
+		}
+	}
+
+	#center-right {
+		.page-conf {
+			&__item {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				height: 48px;
+				border-bottom: 1px dotted rgba($PH-subsection-divider, .23);
+				&:last-child {
+					margin-bottom: 25px;
+				}
+				h3 {
+					color: $PH-dark-blue;
+					letter-spacing: -0.03em;
+				}
+			}
+			&__subtitle {
+				margin-bottom: 15px;
+			}
+			&__tag {
+				&--position {
+					display: flex;
+					align-items: center;
+				}
+				&--single {
+					margin-right: 6px;
+				}
+			}
+		}
+	}
+
+	#bottom-full {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding-left: 30px;
+
+		.btn {
+			width: 190px;
+		}
+	}
+}
+
+/* Admin Users */
+.admin-users {
+
+	#center-left {
+		.page-conf {
+			&__item {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				height: 48px;
+				border-bottom: 1px dotted $PH-gray-border;
+				&:last-child {
+					margin-bottom: 25px;
+				}
+				h3 {
+					color: $PH-dark-blue;
+					letter-spacing: -0.03em;
+				}
+			}
+			&__subtitle {
+				margin-bottom: 15px;
+			}
+			&__tag {
+				&--position {
+					display: flex;
+					align-items: center;
+				}
+				&--single {
+					margin-right: 6px;
+				}
+			}
+		}
+	}
+
+	#center-right {
+
+		.admin {
+			width: 100%;
+			height: 96px;
+			border: 1px solid rgba($PH-dark-gray, .4);
+			box-shadow: 0px 1px 0px 0px rgba(white, 0.45);
+			border-radius: 2px;
+			margin-bottom: 25px;
+
+			&__top {
+				display: flex;
+				align-items: center;
+				position: relative;
+				height: 46px;
+				background-color: rgba($PH-admin-top, .23);
+				padding: 0 15px 0 20px;
+				&--first-text {
+					width: 40%;
+					font-family: Arquette-Semibold;
+					color: $PH-dark-blue;
+					letter-spacing: -0.01em;
+				}
+				&--second-text {
+					width: 60%;
+					font-family: Arquette-Regular;
+					color: $PH-dark-blue;
+					letter-spacing: 0;
+				}
+				.ph-icon-cross {
+					width: 8px;
+					height: 8px;
+					fill: #607d8b;
+					position: absolute;
+					right: 15px;
+					top: 20px;
+				}
+			}
+
+			&__bottom {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				position: relative;
+				height: 46px;
+				background-color: rgba(white, .8);
+				padding: 0 15px 0 20px;
+
+				& .align {
+					height: 18px;
+					display: flex;
+					align-items: center;
+
+					button {
+						border: none;
+						display: inline-block;
+						outline: none;
+						background-color: transparent;
+						height: 18px;
+						width: 28px;
+						margin-right: 8px;
+						&.quzzies-mrg {
+							margin-right: 4px;
+						}
+						&.active {
+							svg {
+								fill: $PH-green;
+							}
+						}
+						&:hover {
+							svg {
+								fill: $PH-dark-pink;
+							}
+						}
+					}
+				}
+
+				.ph-icon {
+					width: 28px;
+					height: 100%;
+					fill: rgba($PH-dark-gray, .23);
+					&-interests {
+						//width: 19px;
+						height: 24px;
+					}
+					&-education {
+						//width: 19px;
+						height: 24px;
+					}
+					&-calendar {
+						//width: 14px;
+						height: 20px;
+					}
+					&-file-manager {
+						//width: 15px;
+						height: 22px;
+					}
+					&-quzzies {
+						//width: 15px;
+						height: 21px;
+						margin-right: 4px;
+					}
+					&-members {
+						//width: 13px;
+						height: 22px;
+					}
+					&-chat {
+						//width: 17px;
+						height: 23px;
+					}
+					&-reset-pass {
+						//width: 29px;
+						height: 24px;
+					}
+				}
+
+				a {
+					display: flex;
+					align-items: center;
+					font-family: Arquette-Regular;
+					font-size: 11px;
+					color: $PH-blue;
+					position: absolute;
+					right: 6px;
+					bottom: 9px;
+					.ph-icon {
+						fill: $PH-blue;
+						padding-bottom: 2px;
+					}
+				}
+			}
+		}
+	}
+
+	#bottom-full {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding-left: 30px;
+
+		.btn {
+			width: 190px;
+		}
+	}
+}
+
+/* Pharmaceutical */
+.pharmaceutical {
+
+	.center-side {
+		padding: 30px;
+	}
+
+	.upload {
+		height: 180px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		border: 1px solid rgba($PH-dark-gray, .36);
+		background-color: rgba($PH-drag-drop, .1);
+		border-radius: 2px;
+		margin-bottom: 50px;
+		padding-bottom: 30px;
+		svg {
+			width: 140px;
+			height: 140px;
+			fill: rgba($PH-dark-gray, .2);
+			//margin-bottom: -34px;
+		}
+		h1 {
+			font-size: 18px;
+			color: $PH-dark-gray;
+		}
+	}
+
+	.file {
+		width: 100%;
+		height: 38px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		background-color: white;
+		padding: 10px 20px;
+		svg {
+			width: 18px;
+			height: 18px;
+			margin-right: 20px;
+		}
+		a {
+			font-size: 13px;
+			font-family: Arquette-Regular;
+			letter-spacing: -0.03em;
+			position: absolute;
+			right: 25px;
+		}
+	}
+
+	//#center-left {
+	//}
+
+	//#center-right {
+	//}
+
+	#bottom-full {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding-left: 30px;
+
+		.btn {
+			width: 190px;
+		}
+	}
+}
+
+/* Add New Group / Company   - same layout as Page Information - Details */
+.new-group-comp {
+
+	#center-left {
+	}
+
+	#center-right {
+	}
+
+	#bottom-full {
+	}
+}
+
+// TODO: pogledaj bottom full sranje jel moze globalno negdje! vidi koliko se ponavlja, togglove sigurno na details
+// i admin users
+
+// TODO: find where to put diff modal styles for etc top-head Invite friends
+
+.invite-friends .ph-modal--holder {
+	h2 {
+		font-size: 14px;
+	}
+	form {
+		text-align: right;
+	}
+	.ph-modal-text-area {
+		background-color: $PH-tag-gray;
+		margin-bottom: 20px;
+	}
+	.module-border--bottom {
+		margin: 0 -25px 20px -25px;
+		border-top: 0;
+	}
+}
+
+.acc-suspended.ph-modal {
+	//background: radial-gradient(circle, white 10%, transparent 10%),
+	//radial-gradient(circle, white 10%, black 10%) 50px 50px;
+	//background-size:100px 100px;
+	background-color: rgba($PH-dark-pink, .9);
+
+	.ph-modal--holder {
+		h2 {
+			font-size: 14px;
+		}
+		.section-subtitle--mrg-btm {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+/* SHARED */
+
+/* banner images */
+.banner {
+	width: 100%;
+	height: 96px;
+	border: 2px solid rgba(white, .4);
+	box-shadow: 0px 1px 0px 0px rgba(white, 0.45);
+	border-radius: 4px;
+	margin-bottom: 20px;
+	position: relative;
+	background-color: pink;
+	&:last-child {
+		margin-bottom: 30px;
+	}
+	&.selected {
+		border: 6px solid rgba(white, 1);
+		svg, span {
+			display: block;
+			position: absolute;
+			//top: calc(50% - 9px);
+		}
+	}
+	svg {
+		display: none;
+		width: 48px;
+		height: 48px;
+		fill: $PH-green;
+		top: calc(50% - 24px);
+		left: calc(50% - 24px);
+	}
+	span {
+		display: none;
+		width: 26px;
+		height: 24px;
+		background-color: white;
+		top: calc(50% - 12px);
+		left: calc(50% - 13px);
+	}
+}
+
+/* section dividers dotted */
+.divider {
+	&__dotted {
+		height: 0;
+		width: 100%;
+		border-bottom: 1px dotted rgba($PH-subsection-divider, .23);
+		margin-bottom: 28px;
+	}
+}
+

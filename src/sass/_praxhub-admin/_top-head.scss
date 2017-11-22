@@ -1,0 +1,106 @@
+.top-head-background {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: auto;
+	height: 220px;
+
+	img {
+		display: inline-block;
+		height: 220px;
+		width: auto;
+		float: left;
+		clear: right;
+	}
+
+	span {
+		background: rgba(red, 0.5);
+		height: 100%;
+		width: 200px;
+		/*display: none;*/
+		display: inline-block;
+		float: left;
+		clear: right;
+		margin-left: -200px;
+		background: -webkit-linear-gradient(left, rgba(204, 204, 204, 0), rgba(204, 204, 204, 1));
+		background: -o-linear-gradient(right, rgba(204, 204, 204, 0), rgba(204, 204, 204, 1));
+		background: -moz-linear-gradient(right, rgba(204, 204, 204, 0), rgba(204, 204, 2040, 1));
+		background: linear-gradient(to right, rgba(204, 204, 204, 0), rgba(204, 204, 204, 1));
+	}
+}
+
+#main-center {
+
+	#top-head-full {
+		position: relative;
+		z-index: 5;
+
+		.profile-img-holder {
+			height: 100%;
+			width: 220px;
+		}
+
+		.top-head {
+			&-right {
+				display: flex;
+			}
+			&--position {
+				width: calc(100% - 220px);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			&__top {
+				&--right {
+					display: flex;
+					align-items: center;
+					margin-top: 14px;
+					position: absolute;
+					right: 0;
+				}
+
+				.percentage {
+					color: $PH-yellow;
+					font-family: $ArquetteBlack;
+					font-size: 30px;
+					line-height: 30px;
+					margin-left: 15px;
+					letter-spacing: -0.01em;
+				}
+
+				&-text {
+					text-transform: uppercase;
+					//color: $PH-sidebar-title;
+					font-family: $ArquetteSemibold;
+					color: $PH-sidebar-title;
+					margin-left: 20px;
+				}
+			}
+
+			&__bottom {
+				justify-content: space-between;
+				align-items: flex-end;
+				margin-left: 20px;
+				margin-bottom: 20px;
+
+				.name {
+					font-size: 25px;
+					line-height: 40px;
+					letter-spacing: -0.01em;
+					color: white;
+				}
+
+				.user-description {
+					//color: $PH-members-card-icon-gray;
+					color: $PH-members-card-icon-gray;
+				}
+
+				.ph-icon {
+					margin-left: 12px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}

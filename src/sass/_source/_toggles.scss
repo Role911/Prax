@@ -1,0 +1,423 @@
+/*
+
+		TOGGLE NEEDS TO BE DONE FROM SCRATCH. MAKE IT WORK EVERYWHERE.
+		ADDITIONAL CLASSES
+			- text left, toggle right
+			- text right, toggle right
+			- text left, toggle left
+			- text & toggle with additional YES and NO text
+
+
+*/
+
+/* TOGGLES */
+.tgl {
+	display: none;
+
+	// add default box-sizing for this scope
+	&,
+	&:after,
+	&:before,
+	& *,
+	& *:after,
+	& *:before,
+	& + .tgl-btn {
+		box-sizing: border-box;
+		&::selection {
+			background: none;
+		}
+	}
+
+	+ .tgl-btn {
+		outline: 0;
+		display: block;
+		width: 50px;
+		height: 28px;
+		position: relative;
+		cursor: pointer;
+		user-select: none;
+		margin: 0;
+		&:after,
+		&:before {
+			position: relative;
+			display: block;
+			content: "";
+			width: 50%;
+			height: 100%;
+		}
+
+		&:after {
+			left: 0;
+		}
+
+		&:before {
+			display: none;
+		}
+
+		&.tgl-btn-text {
+			width: 96px;
+			height: 26px;
+			&:after,
+			&:before {
+				position: relative;
+				display: block;
+				content: "";
+				width: 22px;
+				height: 100%;
+			}
+
+			&:after {
+				left: 0;
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	&:checked + .tgl-btn:after {
+		left: 50%;
+	}
+
+	&:checked + .tgl-btn-text:after {
+		left: calc(100% - 22px);
+	}
+}
+
+.tgl-light {
+	+ .tgl-btn {
+		background: $PH-green;
+		border-radius: 2em;
+		padding: 2px;
+		transition: all .4s ease;
+		&:after {
+			border-radius: 50%;
+			background: #fff;
+			transition: all .2s ease;
+		}
+	}
+
+	&:checked + .tgl-btn {
+		background: $PH-green;
+	}
+
+	&:checked + .tgl-btn.disabled {
+		background: $PH-gray;
+	}
+}
+
+.toggle-box {
+	text-align: right;
+	position: relative;
+	color: $PH-dark-gray;
+	margin-bottom: 10px;
+
+	span {
+		float: left;
+		position: relative;
+		top: 7px;
+		line-height: 1;
+		color: $PH-dark-gray;
+		display: inline-block;
+		font-size: 11px;
+		margin-right: 25px;
+		letter-spacing: -0.03em;
+	}
+
+	b {
+		display: inline-block;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 1;
+		position: relative;
+		top: 3px;
+		&.tag-yes {
+			color: $PH-dark-blue;
+			margin-right: 8px;
+		}
+		&.tag-no {
+			margin-left: 8px;
+		}
+	}
+
+	input[type=checkbox] {
+		height: 0;
+		width: 0;
+		visibility: hidden;
+		display: none;
+
+	}
+
+	label {
+		cursor: pointer;
+		text-indent: -9999px;
+		width: 50px;
+		height: 28px;
+		/*background: grey;*/
+		display: inline-block;
+		border-radius: 28px;
+		position: relative;
+		margin: 0;
+		padding: 0;
+	}
+
+	label:after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		width: 24px;
+		height: 24px;
+		background: $PH-white;
+		border-radius: 24px;
+		-webkit-transition: all .2s ease;
+		-moz-transition: all .2s ease;
+		transition: all .2s ease;
+	}
+
+	input:checked + label {
+		/*background: #bada55;*/
+	}
+
+	input:checked + label:after {
+		right: calc(100% - 2px);
+		transform: translateX(100%);
+	}
+
+	label:active:after {
+		width: 34px;
+	}
+
+	/* color */
+	&.toggle-light {
+		label {
+			background: $PH-gray;
+		}
+		input:checked + label {
+			background: $PH-green;
+		}
+	}
+	&.toggle-dark {
+		label {
+			background: $PH-dark-gray;
+		}
+		input:checked + label {
+			background: $PH-green;
+		}
+	}
+
+	/* text & toggle left */
+	&.toggle-left {
+		text-align: left;
+	}
+	/* text & toggle right */
+	&.toggle-right {
+		span {
+			float: none;
+			top: 3px;
+		}
+	}
+
+	/* Toggle withj bottom border, bigger text and padding */
+	&.toggle-border {
+		margin-bottom: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px dotted rgba($PH-dark-gray, 0.5);
+
+		span {
+			font-size: 12px;
+			color: $PH-dark-blue;
+			font-family: $ArquetteMedium;
+			letter-spacing: -0.01em;
+		}
+	}
+}
+
+/* RADIO BTN & CHECK BOXES*/
+.checkbox,
+.radio {
+	margin-bottom: 6px;
+
+	&.inline {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 18px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	label {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		@include disable-text-select;
+
+	}
+	input[type="checkbox"],
+	input[type="radio"] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		visibility: hidden;
+	}
+
+	.custom-checkbox,
+	.custom-radio {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 6px 0 0;
+		width: 16px;
+		height: 16px;
+		background: $PH-white;
+		position: relative;
+	}
+}
+
+.checkbox {
+	.custom-checkbox {
+		border-radius: 2px;
+		transition: box-shadow 180ms ease;
+		box-shadow: inset 0 0 0 12px $PH-white;
+	}
+
+	.icon-check {
+		width: 10px;
+		height: 10px;
+		background-size: cover;
+		position: absolute;
+		top: 3px;
+		left: 5.5px;
+		transform: scale(0);
+		transition: all 180ms ease;
+	}
+
+	input[type="checkbox"]:checked + .custom-checkbox {
+		border-color: $PH-blue;
+		box-shadow: none;
+		.icon-check {
+			transform: scale(1);
+		}
+	}
+}
+
+.radio {
+	.custom-radio {
+		border-radius: 18px;
+		background: $PH-white;
+		box-shadow: inset 0 0 0 12px $PH-white;
+		transition: all 180ms ease;
+	}
+
+	.we-custom-radio {
+		width: 20px;
+		height: 20px;
+		border-radius: 10px;
+		background-color: $PH-white;
+		box-shadow: 0px 1px 0px 0px rgba(black, 0.11) inset;
+		transform: scale(1);
+		will-change: transform;
+		transition: transform .1s ease-in-out;
+	}
+
+	input[type="radio"]:checked + .custom-radio {
+		border-color: $PH-white;
+		background: $PH-blue;
+		box-shadow: inset 0 0 0 3px $PH-white;
+	}
+
+	input[type="radio"]:checked + .we-custom-radio {
+		border-color: $PH-yellow;
+		background: $PH-yellow;
+		border-radius: 14px;
+		box-shadow: none;
+		transform: scale(1.4);
+		content: 'Checked';
+		&:after {
+			content: '';
+			display: block;
+			position: relative;
+			top: 3px;
+			left: 7px;
+			width: 4px;
+			height: 10px;
+			border: solid $PH-white;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg);
+			background-color: transparent;
+		}
+	}
+}
+
+.icon-check {
+	display: inline-block;
+	&:after {
+		content: '';
+		display: block;
+		width: 3px;
+		height: 6px;
+		border: solid $PH-blue;
+		border-width: 0 2px 2px 0;
+		transform: rotate(45deg);
+	}
+}
+
+.pending-memb {
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	border-radius: 13px;
+	padding: 4px;
+	transform: rotate(0);
+	will-change: transform;
+	transition: transform .1s ease-in-out .1s;
+	&:after {
+		border: none;
+	}
+	&:hover {
+		border: none;
+	}
+	svg {
+		fill: $PH-white;
+
+	}
+	&.positive {
+		background-color: $PH-green;
+		&:hover {
+			background-color: $PH-blue;
+			transform: rotate(180deg);
+		}
+	}
+	&.negative {
+		background-color: $PH-dark-pink;
+		&:hover {
+			background-color: $PH-blue;
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.we-social-event {
+	display: flex;
+	align-items: center;
+	font-size: 10px;
+	&:hover {
+		svg {
+			fill: $PH-blue;
+		}
+		a {
+			color: $PH-blue;
+		}
+	}
+	svg {
+		width: 11px;
+		height: 10px;
+		margin-right: 10px;
+		fill: $PH-cyan;
+	}
+	a {
+		color: $PH-dark-gray;
+	}
+}

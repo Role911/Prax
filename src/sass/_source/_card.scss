@@ -1,0 +1,413 @@
+.card {
+	background: white;
+	min-width: 280px;
+	width: 280px;
+	height: 100%;
+	border-radius: 2px;
+	border: 1px solid rgba(211, 211, 211, .73);
+
+	&:hover {
+		border: 1px solid $PH-blue;
+		background: rgba($PH-blue, 0.05);
+	}
+
+	&.educ-tile {
+		padding: 5px;
+		height: 216px;
+
+		& .tile-video {
+			width: 100%;
+			height: 128px;
+			background-color: $PH-dark-pink;
+			position: relative;
+
+			.svg-holder {
+				position: absolute;
+				left: calc(50% - 24px);
+				top: calc(50% - 24px);
+				svg {
+					width: 48px;
+					height: 48px;
+					stroke: white;
+					stroke-width: 1px;
+					fill: rgba(white, .44);
+				}
+			}
+		}
+
+		& .tile-desc-holder {
+			display: flex;
+			position: relative;
+
+			&--left {
+				padding: 15px 13px;
+				max-width: 226px;
+				max-height: 82px;
+				h1 {
+					margin-bottom: 5px;
+					color: $PH-dark-blue;
+					letter-spacing: -0.01em;
+					font-family: $ArquetteMedium;
+				}
+				h4 {
+					color: $PH-dark-gray;
+					letter-spacing: -0.01em;
+				}
+			}
+
+			&--right {
+				width: 54px;
+				text-align: center;
+				padding-bottom: 13px;
+				padding-top: 28px;
+
+				h1 {
+					color: $PH-dark-pink;
+					font-size: 20px;
+					letter-spacing: -0.03em;
+				}
+				h5 {
+					color: $PH-dark-gray;
+					letter-spacing: -0.03em;
+				}
+			}
+			&--circle {
+				width: 54px;
+				height: 54px;
+				border-radius: 27px;
+				position: absolute;
+				right: -3px;
+				top: -27px;
+				background-color: $PH-ed-tile-circle;
+				border: 3px solid $PH-white;
+			}
+		}
+		&.big {
+			height: 236px;
+			//width: 300px;
+			width: 100%;
+			margin-bottom: 30px;
+			& .tile-video {
+				height: 148px;
+				.top-section {
+					display: flex;
+					justify-content: space-between;
+					&__left {
+						padding-left: 14px;
+						padding-top: 12px;
+						&:first-child {
+							font-size: 10px;
+							color: white;
+						}
+						svg {
+							width: 15px;
+							height: 15px;
+							fill: white;
+							margin-right: 5px;
+						}
+					}
+					.info-align {
+						display: flex;
+						//align-items: center;
+					}
+				}
+				.middle-btn {
+					position: absolute;
+					left: calc(50% - 43px);
+					top: calc(50% - 12.5px);
+					svg {
+						margin-left: 10px;
+						width: 14px;
+						height: 14px;
+						fill: white;
+					}
+				}
+				.bottom-section {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					position: absolute;
+					bottom: 10px;
+					left: 10px;
+					width: 16px;
+					height: 16px;
+					border-radius: 8px;
+					border: 1px solid rgba(white, .39);
+					background-color: rgba(white, .11);
+
+					& .fill-circle {
+						display: block;
+						width: 12px;
+						height: 12px;
+						border-radius: 6px;
+						background-color: yellow;
+					}
+				}
+			}
+			& .tile-desc-holder {
+				display: flex;
+				position: relative;
+				&--left {
+					padding: 15px 0 15px 15px;
+					max-width: 238px;
+				}
+
+				&--right {
+					width: 51px;
+				}
+				&--circle {
+					width: 54px;
+					height: 54px;
+					border-radius: 27px;
+					position: absolute;
+					right: -3px;
+					top: -27px;
+					background-color: $PH-ed-tile-circle;
+					border: 3px solid $PH-white;
+				}
+			}
+		}
+	}
+	// education tile
+
+	&.educ-tile-thin {
+		display: flex;
+		padding: 5px 15px 5px 5px;
+		height: 72px;
+		& .web-el-text {
+			padding: 8px 0;
+			h3 {
+				margin-bottom: 4px;
+			}
+		}
+
+		& .tile-thin-video {
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			min-width: 105px;
+			height: 60px;
+			margin-right: 10px;
+			background-color: $PH-dark-blue;
+
+			& .watch-later__mrg {
+				margin-right: 5px;
+				margin-bottom: 5px;
+			}
+		}
+
+		& .tile-thin-text-align {
+			display: flex;
+			justify-content: space-between;
+
+			h3 {
+				color: $PH-dark-pink;
+				font-family: $ArquetteRegular;
+				letter-spacing: -0.03em;
+			}
+		}
+	}
+	// END education tile thin
+
+	&.members {
+		height: 80px;
+		padding: 15px;
+		margin-bottom: 20px;
+		display: flex;
+		position: relative;
+
+		& .memb-img {
+			min-width: 50px;
+			min-height: 50px;
+			background-color: red;
+			margin-right: 15px;
+			border-radius: 2px;
+		}
+
+		& .memb-width {
+			width: 100%;
+			height: 50px;
+			display: flex;
+			flex-direction:column;
+			justify-content: space-between;
+		}
+
+		& .mem-title {
+			display: flex;
+			justify-content: space-between;
+			h2 {
+				line-height: 16px;
+				color: $PH-dark-blue;
+			}
+		}
+
+		& .mem-sub-title {
+			display: flex;
+
+			i {
+				font-size: 14px;
+				margin-left: 12px;
+				margin-right: 4px;
+				color:$PH-members-card-icon-gray;
+			}
+			h4 {
+				display: flex;
+				line-height: 16px;
+				color: $PH-dark-gray;
+			}
+		}
+
+		& .mem-desc {
+			display: flex;
+			justify-content: space-between;
+			h6 {
+				display: flex;
+				line-height: 16px;
+				color: $PH-dark-gray;
+			}
+			[class^="ph-icon-"], [class*=" ph-icon-"] {
+				font-size: 12px;
+				&:first-child {
+					color: $PH-dark-gray;
+					margin-right: 5px;
+				}
+				&:last-child {
+					color: $PH-green;
+					margin-left: 10px;
+					margin-right: 5px;
+				}
+			}
+			&--align {
+				display: flex;
+			}
+
+			&--disabled {
+				color: $PH-members-card-icon-gray;
+				[class^="ph-icon-"], [class*=" ph-icon-"] {
+					&:last-child {
+						color: $PH-members-card-icon-gray;
+						margin-left: 10px;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+	// END members
+
+	&.interests-comp {
+		height: 80px;
+		padding: 15px;
+		display: flex;
+
+		& .company-img {
+			width: 50px;
+			height: 50px;
+			margin-right: 15px;
+			border-radius: 2px;
+		}
+
+		& .mem-title {
+			display: flex;
+			font-size: 16px;
+		}
+
+		& .mem-sub-title {
+			display: flex;
+			font-size: 14px;
+			svg {
+				margin: 0 5px;
+				height: 14px;
+				width: 14px;
+				fill: $PH-dark-gray;
+			}
+		}
+
+		& .mem-desc {
+			display: flex;
+			//font-size: 12px;
+			svg {
+				height: 14px;
+				width: 14px;
+				margin-right: 8px;
+				fill: $PH-green;
+			}
+		}
+	}
+	// END interests-comp
+}
+
+/* The Modal (background) */
+// TODO: make custom width holders modals; prebaci ga u drugi scss
+.ph-modal {
+	display: none;
+	position: fixed;
+	z-index: 101;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba($PH-dark-blue, .9);
+
+	&--holder {
+		min-width: 200px;
+		min-height: 100px;
+		width: 500px;
+		border-radius: 2px;
+		margin: auto;
+		padding: 25px;
+		background-color: white;
+		box-shadow: 0px 39px 50px 0px rgba(black, 0.21);
+	}
+
+	//h2 {
+	//	font-size: 14px;
+	//}
+	//
+	//form {
+	//	text-align: right;
+	//}
+
+	//.ph-modal-text-area {
+	//	background-color: $PH-tag-gray;
+	//	margin-bottom: 20px;
+	//}
+
+	&--close {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		right: 0;
+		top: -24px;
+		cursor: pointer;
+		&:hover {
+			svg {
+				fill: $PH-dark-pink;
+			}
+			a:after {
+				border-color: white;
+			}
+		}
+		svg {
+			width: 12px;
+			height: 12px;
+			fill: white;
+			margin-right: 8px;
+
+		}
+		a {
+			font-size: 12px;
+			color: white;
+			&:after {
+				border-color: white;
+			}
+		}
+	}
+
+	//.module-border--bottom {
+	//	margin: 0 -25px 20px -25px;
+	//	border-top: 0;
+	//}
+}

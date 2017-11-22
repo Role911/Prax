@@ -1,0 +1,275 @@
+.published, .add {
+	.container-position {
+		padding: 30px 0 30px 15px;
+	}
+
+	.divider {
+		height: 0;
+		border-bottom: 1px solid rgba($PH-dark-gray, .3);
+		margin: 25px 0;
+		&.dotted {
+			border-style: dotted;
+		}
+		&.no-top {
+			margin-top: 0;
+		}
+	}
+}
+
+/* Published */
+.published {
+	.form-group {
+		display: flex;
+		position: relative;
+	}
+	.ph-icon-search--holder {
+		border: none;
+		outline: none;
+		background: transparent;
+		position: absolute;
+		top: 5px;
+		right: 9px;
+		.ph-icon-search {
+			fill: $PH-dark-pink;
+		}
+	}
+}
+
+/* Add New */
+
+.add {
+	.container-fix {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.edu-edit {
+		height: 112px;
+		background-color: $PH-back-stat;
+		margin-bottom: 2px;
+		text-align: right;
+		padding: 0 0 0 15px;
+		&:after {
+			display: block;
+			height: 100%;
+			width: 500%;
+			position: absolute;
+			top: 0;
+			right: -500%;
+			content: "";
+			background: $PH-back-stat;
+		}
+
+		.statistic {
+			&--position {
+				margin-top: 30px;
+				display: inline-block;
+				width: 61%;
+				text-align: center;
+				float: left;
+			}
+			&__section {
+				display: inline-block;
+				float: left;
+				clear: right;
+				width: 25%;
+				text-align: center;
+				&--text-top {
+					font-family: $ArquetteRegular;
+					font-size: 12px;
+					line-height: 12px;
+					letter-spacing: -0.01em;
+					color: $PH-dark-gray;
+					margin-bottom: 2px;
+				}
+				&--text-bottom {
+					font-family: $ArquetteRegular;
+					font-size: 35px;
+					line-height: 36px;
+					letter-spacing: -0.01em;
+					color: $PH-dark-blue;
+				}
+
+			}
+		}
+		.filter-back {
+			margin-top: 40px;
+			display: inline-block;
+			line-height: 30px;
+			color: $PH-back-link;
+			font-size: 10px;
+			text-decoration: none !important;
+			margin-left: 30px;
+			float: right;
+		}
+		&.top-head-statistic-full {
+			.statistic {
+				&--position {
+					width: 100%;
+				}
+				&__section {
+					width: 16.66666666%;
+				}
+			}
+		}
+	}
+
+	#center-left {
+		padding: 30px 30px 30px 15px;
+		.visible-group {
+			&__title {
+				font-family: Arquette-Regular;
+			}
+		}
+		.toggle-box.toggle-border {
+			padding-bottom: 38px;
+			margin-bottom: 35px;
+		}
+		.edu-tags {
+			&__title {
+				font-size: 18px;
+				font-family: $ArquetteRegular;
+				margin-bottom: 14px;
+			}
+			&--position {
+				display: flex;
+				align-items: center;
+				span {
+					margin-right: 6px;
+				}
+			}
+		}
+	}
+
+	#center-right {
+		padding-top: 30px;
+		padding-left: 30px;
+
+		.question {
+			&__title {
+				margin-bottom: 20px;
+			}
+		}
+
+		/*.form-group {
+			button {
+				position: absolute;
+				right: 15px;
+				top: 30px;
+				background-color: transparent;
+			}
+			.ph-icon-calendar {
+				color: rgba($PH-dark-gray, .2);
+			}
+		}*/
+
+		.hosts-box {
+			padding: 0 0 15px 0;
+
+			img {
+				display: inline-block;
+				width: 42px;
+				height: 42px;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+			}
+
+			span {
+				float: right;
+				height: 42px;
+				display: inline-block;
+				width: calc(100% - 60px);
+			}
+
+			p {
+				display: inline-block;
+				float: left;
+				text-transform: uppercase;
+				color: $PH-sidebar-title;
+				font-size: 10px;
+				font-family: $ArquetteMedium;
+				width: 100%;
+				max-width: 150px;
+				position: relative;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				-moz-transform: translateY(-50%);
+				transform: translateY(-50%);
+
+				b {
+					font-size: 14px;
+					font-family: $ArquetteMedium;
+					color: $PH-dark-blue;
+					display: block;
+					text-transform: none;
+					line-height: 1;
+					font-weight: 400;
+				}
+			}
+
+			.btn {
+				border: none;
+				padding: 0;
+				width: 28px;
+				height: 28px;
+				border-radius: 0;
+				position: relative;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				-moz-transform: translateY(-50%);
+				transform: translateY(-50%);
+				margin-right: 10px;
+				color: $PH-dark-gray;
+
+				.ph-icon-drag-item {
+					top: 2px;
+				}
+
+				.ph-icon-cross-2 {
+					font-size: 10px;
+				}
+
+			}
+
+			/*.ph-icon-drag{
+				width:14px;
+				height:14px;
+				fill: $PH-dark-gray;
+				top:2px;
+			}
+
+			.ph-icon-close{
+				width:10px;
+				height:10px;
+				fill: $PH-dark-gray;
+			}*/
+		}
+	}
+
+	.modal-content{
+
+	}
+
+	.modal-header {
+
+	}
+
+	.modal-body {
+		&__content {
+			color: $PH-dark-gray;
+			margin-bottom: 25px;
+		}
+	}
+
+
+
+
+
+}
+
+
+
+
+
+

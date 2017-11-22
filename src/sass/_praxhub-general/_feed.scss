@@ -1,0 +1,202 @@
+.feed-item{
+    border:1px solid $PH-sidebar-border;
+
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+
+
+    .feed-top{
+        padding:15px;
+        border-bottom:1px solid $PH-sidebar-border;
+
+        .col-lg-5{
+            text-align:right;
+            padding-left:0;
+        }
+
+
+        .avatar{
+            display:block;
+            width:50px;
+            height:50px;
+            float:left;
+            clear:right;
+            margin-right:15px;
+
+            img{
+                display:block;
+                max-width:100%;
+            }
+        }
+        .profile-info{
+            display:inline-block;
+            padding:8px 0;
+
+            strong{
+                font-size:14px;
+                font-weight:400;
+                font-family: $ArquetteMedium;
+                color:$PH-dark-blue;
+                display: block;
+                line-height:1;
+            }
+
+            span{
+                font-size:11px;
+                font-family: $ArquetteRegular;
+                color:$PH-dark-gray;
+                line-height:1;
+            }
+
+
+            i{
+                color:rgba($PH-dark-gray, 0.4);
+                font-size:13px;
+                top:2px;
+            }
+
+            /*svg{
+                top:3px;
+                width:13px;
+                height:13px;
+                fill:rgba($PH-dark-gray, 0.4);
+            }*/
+        }
+
+
+        .avatar{
+            display:block;
+            width:50px;
+            height:50px;
+            float:left;
+            clear:right;
+            margin-right:15px;
+
+            img{
+                display:block;
+                max-width:100%;
+            }
+        }
+
+
+        .button-box{
+            display:block;
+            width:95px;
+            height:50px;
+            float:right;
+            clear:left;
+            margin-left:15px;
+
+            .btn{
+                margin:10px 0 0 0;
+            }
+        }
+
+        .content-info{
+            display:inline-block;
+            padding:13px 0 0 0;
+
+            strong{
+                font-size:10px;
+                font-weight:400;
+                font-family: $ArquetteSemibold;
+                color:$PH-green-status;
+                display: block;
+                line-height:1;
+                text-transform:uppercase;
+            }
+
+            span{
+                font-size:11px;
+                font-family: $ArquetteRegular;
+                color:$PH-dark-gray;
+                line-height:1;
+            }
+        }
+    }
+
+    .feed-main{
+        padding:15px 5px 15px 5px;
+        p{
+            margin:0 10px 15px 10px;
+        }
+        img{
+            display: block;
+            max-width: 100%;
+        }
+
+    }
+
+    .feed-bottom{
+        padding:0 0 5px 0;
+
+
+        ul{
+            margin:0 0 10px 15px;
+            padding:0;
+            list-style: none;
+            display:inline-block;
+
+            li{
+                margin:0 15px 0 0;
+                padding:0;
+                color:$PH-back-link;
+                font-size:10px;
+                font-family: $ArquetteRegular;
+                display:inline-block;
+            }
+
+            i{
+                margin-right:5px;
+                color:$PH-cyan;
+                font-size:13px;
+                top:3px;
+
+                &.ph-icon-menu-vertical{
+                    top:0;
+                    margin-right:0;
+                }
+            }
+
+            /*svg{
+                margin-right:5px;
+                top:3px;
+                width:13px;
+                height:13px;
+                fill:$PH-cyan;
+            }*/
+
+            a{
+                color:$PH-back-link;
+                text-decoration:none!important;
+
+                &:hover,
+                &:focus{
+                    color:$PH-blue;
+                    svg{
+                        fill:$PH-blue;
+                    }
+                }
+            }
+
+
+
+            &.activity-links{
+                margin:0;
+                float:right;
+
+                li{
+                    margin:0 0 0 0;
+
+                    &:first-child{
+                        padding-right:15px;
+                        border-right:1px solid $PH-sidebar-border;
+                    }
+                }
+
+
+            }
+        }
+    }
+}

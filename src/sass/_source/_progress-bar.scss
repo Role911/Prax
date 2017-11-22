@@ -1,0 +1,45 @@
+.pb-progress {
+  width: 236px;
+  height: 18px;
+  border-radius: 9px;
+  background-color: $PH-white;
+  overflow: hidden;
+  box-shadow: 0px 1px 0px 0px rgba(white, 0.61);
+  border: 1px solid rgba($PH-gray-border, .73);
+
+  & .pb-bar {
+	width: 0;
+	height: 18px;
+	border-radius: 9px;
+	background: linear-gradient(0deg, rgba(#619f3f,1) 0%, rgba($PH-green,1) 100%); /* w3c */
+	background-color: $PH-green;
+  }
+}
+
+.pb-steps {
+  display: block;
+  width: 400px;
+  height: 4px;
+  background-color: white;
+  position: relative;
+
+  & .circle {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: $PH-cyan;
+	border: 3px solid white;
+	position: absolute;
+	top: -8px;
+	&__left {
+
+	}
+	&__middle {
+		left: calc(50% - 10px);
+	}
+	&__right {
+	  right: 0;
+	}
+  }
+}

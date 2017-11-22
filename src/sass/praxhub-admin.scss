@@ -1,0 +1,48 @@
+@charset "UTF-8";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
+
+/* praxhub - kit */
+@import "_source/_mixins";
+@import "_source/_variables";
+/**/
+@import "_source/_fonts";
+@import "_source/_colors";
+@import "_source/_text";
+@import "_source/_button";
+@import "_source/_icons";
+/**/
+@import "_source/_card";
+@import "_source/_progress-bar";
+@import "_source/_tags";
+@import "_source/_form";
+@import "_source/_toggles";
+@import "_source/_dropdown";
+
+
+/**/
+
+/* praxhub - admin styling */
+@import "_praxhub-admin/_base-structure";
+@import "_praxhub-general/_base";
+@import "_praxhub-general/_header";
+@import "_praxhub-general/_footer";
+@import "_praxhub-general/_modal";
+@import "_praxhub-general/_feed";
+@import "_praxhub-admin/_sidebar-admin";
+@import "_praxhub-admin/_top-head";
+@import "_praxhub-admin/_dashboard";
+@import "_praxhub-admin/_profile-information";
+@import "_praxhub-admin/_cpd";
+@import "_praxhub-admin/_education";
+@import "_praxhub-admin/_notifications";
+@import "_praxhub-admin/_members";
+
+@import "_praxhub-admin/_admin-super";
+
+/**/
+/*@import "_praxhub-admin/_chat";*/
+@import "_praxhub-general/_pagination";
+
+
+
+

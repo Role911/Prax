@@ -1,0 +1,19 @@
+
+           <div id="sidebar-left"
+                <ul class="sidebar-nav">
+                    <li class="active" ng-repeat="tab in $ctrl.tabs">
+                        <a href="#" ui-sref="{{:: tab.state }}">
+                            <svg class="ph-icon ph-logo-small">
+                                <use xlink:href="../img/sprite.svg#ph-logo-small"></use>
+                            </svg>
+                            <span>{{:: tab.name }}</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <hr class="sidebar-divider">
+            </div>
+
+
+ 

@@ -1,0 +1,96 @@
+h1, h2, h3, h4, h5, h6, a, p, .kit-sub-title {
+	font-family: $ArquetteRegular;
+	margin: 0;
+}
+
+.sign-up-text {
+
+	h1 {
+		font-size: 25px;
+	}
+	h2 {
+		font-size: 15px;
+		letter-spacing: -0.03em;
+	}
+	h3 {
+		font-size: 14px;
+	}
+	h4 {
+		font-size: 13px;
+		letter-spacing: -0.03em;
+	}
+	h5 {
+		font-size: 11px;
+		letter-spacing: -0.01em;
+	}
+	p {
+		font-size: 12px;
+		letter-spacing: -0.01em;
+	}
+}
+
+.web-el-text {
+	h2, h3, h5 {
+		font-family: $ArquetteMedium;
+		letter-spacing: -0.01em;
+	}
+	h1 {
+		font-size: 13px;
+	}
+	h2 {
+		font-size: 14px;
+	}
+	h3 {
+		font-size: 12px;
+	}
+	h4 {
+		font-size: 11px;
+	}
+	h5 {
+		font-size: 10px;
+		line-height: 18px;
+	}
+	h6 {
+		font-size: 9px;
+		line-height: 16px;
+	}
+	p {
+		font-size: 14px;
+		letter-spacing: -0.03em;
+	}
+	//for presentation on web element fonts
+	.kit-title {
+		font-size: 25px;
+	}
+	.kit-sub-title {
+		font-size: 15px;
+	}
+}
+
+
+/* LINKS */
+p,
+.table-dash-sa td,
+span.form-link,
+.flagged-actions,
+.modal-close{
+	a {
+		color: $PH-blue;
+		text-decoration: none;
+		position: relative;
+		letter-spacing: -0.01em;
+		font-size: 12px;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			width: 0;
+			border-bottom: 1px solid $PH-blue;
+			transition: 0.4s;
+		}
+		&:hover:after {
+			width: 100%;
+		}
+	}
+}
